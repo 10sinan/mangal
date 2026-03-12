@@ -1,3 +1,4 @@
+Mangal Hesabı Söndürücü
 Mangal başındaki "Kim ne kadar ödedi?", "Kimin kime borcu var?" kaosunu bitirmek için geliştirilmiş, AI Agent Teams (Claude Code) tarafından kodlanmış akıllı bir hesap yönetim uygulamasıdır.
 
 🚀 Özellikler
