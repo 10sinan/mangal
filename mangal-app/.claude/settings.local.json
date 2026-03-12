@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cd \"C:\\\\Users\\\\Sinan\\\\Desktop\\\\YAZILIM MÜH\\\\projeler\\\\mangal\\\\mangal-app\" && npm run dev)",
+      "Bash(cd \"C:\\\\Users\\\\Sinan\\\\Desktop\\\\YAZILIM MÜH\\\\projeler\\\\mangal\\\\mangal-app\" && npm install -D tailwindcss@3 postcss autoprefixer)",
+      "Bash(cd \"C:\\\\Users\\\\Sinan\\\\Desktop\\\\YAZILIM MÜH\\\\projeler\\\\mangal\\\\mangal-app\" && npm install -D tailwindcss@3 postcss autoprefixer 2>&1)",
+      "Bash(cd \"C:\\\\Users\\\\Sinan\\\\Desktop\\\\YAZILIM MÜH\\\\projeler\\\\mangal\\\\mangal-app\" && npm pkg get devDependencies)",
+      "Bash(node -e \"const fs=require\\('fs'\\); fs.writeFileSync\\('C:/Users/Sinan/Desktop/YAZILIM MÜH/projeler/mangal/mangal-app/src/index.css', '@tailwind base;\\\\n@tailwind components;\\\\n@tailwind utilities;\\\\n\\\\nbody {\\\\n  margin: 0;\\\\n}\\\\n', {encoding:'utf8'}\\); console.log\\('done'\\);\")",
+      "Bash(node -e \"const fs=require\\('fs'\\); const buf=fs.readFileSync\\('C:/Users/Sinan/Desktop/YAZILIM MÜH/projeler/mangal/mangal-app/src/index.css'\\); console.log\\('hex:', buf.slice\\(0,20\\).toString\\('hex'\\)\\); console.log\\('text:', buf.slice\\(0,50\\).toString\\(\\)\\);\")",
+      "Bash(node -e \"const fs=require\\('fs'\\); const buf=fs.readFileSync\\('C:/Users/Sinan/Desktop/YAZILIM MÜH/projeler/mangal/mangal-app/tailwind.config.js'\\); console.log\\('hex:', buf.slice\\(0,20\\).toString\\('hex'\\)\\); console.log\\('length:', buf.length\\);\")",
+      "Bash(node -e \"\nconst fs=require\\('fs'\\);\nconst content = \\\\`/** @type {import\\('tailwindcss'\\).Config} */\nexport default {\n  content: [\n    './index.html',\n    './src/**/*.{js,ts,jsx,tsx}',\n  ],\n  theme: {\n    extend: {},\n  },\n  plugins: [],\n}\n\\\\`;\nfs.writeFileSync\\('C:/Users/Sinan/Desktop/YAZILIM MÜH/projeler/mangal/mangal-app/tailwind.config.js', content, {encoding:'utf8'}\\);\nconsole.log\\('done'\\);\n\")",
+      "Bash(cd \"C:\\\\Users\\\\Sinan\\\\Desktop\\\\YAZILIM MÜH\\\\projeler\\\\mangal\\\\mangal-app\" && npm run dev 2>&1)"
+    ]
+  }
+}
