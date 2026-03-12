@@ -1,42 +1,43 @@
-Mangal Hesabı Söndürücü
-Mangal başındaki "Kim ne kadar ödedi?", "Kimin kime borcu var?" kaosunu bitirmek için geliştirilmiş, AI Agent Teams (Claude Code) tarafından kodlanmış akıllı bir hesap yönetim uygulamasıdır.
+# Mangal Hesabı Söndürücü
 
-🚀 Özellikler
-Akıllı Borç Paylaşımı: Gelişmiş "Greedy" algoritması sayesinde minimum sayıda para transferi ile borçları hesaplar.
+Mangal başındaki **“Kim ne kadar ödedi?”**, **“Kimin kime borcu var?”** kaosunu bitirmek için geliştirilmiş akıllı bir hesap yönetim uygulamasıdır.
 
-WhatsApp Sohbet Analizi: WhatsApp'tan dışa aktarılan .txt sohbet geçmişini yükleyin; harcamaları, isimleri ve tutarları otomatik ayıklasın.
+## 🚀 Özellikler
 
-Çoklu Ödeme Desteği: Bir harcamayı birden fazla kişi arasında bölüştürebilme.
+- **Akıllı borç paylaşımı:** “Greedy” algoritması ile minimum sayıda para transferiyle borçları hesaplar.
+- **WhatsApp sohbet analizi:** WhatsApp’tan dışa aktarılan `.txt` sohbet geçmişini yükleyin; harcamaları, isimleri ve tutarları otomatik ayıklasın.
+- **Çoklu ödeme desteği:** Bir harcamayı birden fazla kişi arasında bölebilme.
+- **Hızlı özet:** “WhatsApp’ta Paylaş” butonu ile sonuçları tek tıkla gruba metin olarak gönderebilme.
+- **LocalStorage entegrasyonu:** Veriler tarayıcıda saklanır; sayfa yenilense de kaybolmaz.
 
-Hızlı Özet: "WhatsApp'ta Paylaş" butonu ile sonuçları tek tıkla gruba metin olarak atabilme.
+## 🛠️ Teknolojiler
 
-LocalStorage Entegrasyonu: Veriler tarayıcıda saklanır, sayfa yenilense de gitmez.
+- React + Vite
+- Tailwind CSS
+- Claude Code (Agent Teams)
 
+## 📦 Kurulum
 
+1. Repoyu klonlayın:
+   ```bash
+   git clone <repo-url>
+   ```
+2. Klasöre girin:
+   ```bash
+   cd mangal-app
+   ```
+3. Bağımlılıkları yükleyin:
+   ```bash
+   npm install
+   ```
+4. Projeyi başlatın:
+   ```bash
+   npm run dev
+   ```
 
-🛠️ Teknolojiler
-React + Vite (Hızlı ve modern frontend)
+## 💡 Nasıl Kullanılır?
 
-Tailwind CSS (Şık ve hızlı stil yönetimi)
-
-Claude Code (Agent Teams): Bu proje Anthropic'in deneysel ajan takımları kullanılarak geliştirilmiştir.
-
-📦 Kurulum
-Projeyi yerelde çalıştırmak için:
-
-Repoyu klonlayın: git clone <repo-url>
-
-Klasöre girin: cd mangal-app
-
-Bağımlılıkları yükleyin: npm install
-
-Projeyi başlatın: npm run dev
-
-💡 Nasıl Kullanılır?
-Katılımcıları Ekle: Mangala katılan herkesin adını yaz.
-
-Harcamaları Gir: İstersen manuel gir, istersen WhatsApp sohbetini .txt olarak yükle.
-
-Sonucu Al: "Sonuç" sekmesine git, kimin kime ne kadar atacağını gör.
-
-Paylaş: Listeyi kopyala ve WhatsApp grubuna yapıştır!
+1. **Katılımcıları ekle:** Mangala katılan herkesin adını yaz.
+2. **Harcamaları gir:** İstersen manuel gir, istersen WhatsApp sohbetini `.txt` olarak yükle.
+3. **Sonucu al:** “Sonuç” sekmesine git, kimin kime ne kadar atacağını gör.
+4. **Paylaş:** Listeyi kopyala ve WhatsApp grubuna yapıştır.
