@@ -1,64 +1,41 @@
-# mangal-app
+Mangal başındaki "Kim ne kadar ödedi?", "Kimin kime borcu var?" kaosunu bitirmek için geliştirilmiş, AI Agent Teams (Claude Code) tarafından kodlanmış akıllı bir hesap yönetim uygulamasıdır.
 
-React + Vite ile geliştirilmiş web uygulaması.
+🚀 Özellikler
+Akıllı Borç Paylaşımı: Gelişmiş "Greedy" algoritması sayesinde minimum sayıda para transferi ile borçları hesaplar.
 
-## Gereksinimler
+WhatsApp Sohbet Analizi: WhatsApp'tan dışa aktarılan .txt sohbet geçmişini yükleyin; harcamaları, isimleri ve tutarları otomatik ayıklasın.
 
-- Node.js (öneri: LTS)
-- npm (veya yarn/pnpm)
+Çoklu Ödeme Desteği: Bir harcamayı birden fazla kişi arasında bölüştürebilme.
 
-## Kurulum
+Hızlı Özet: "WhatsApp'ta Paylaş" butonu ile sonuçları tek tıkla gruba metin olarak atabilme.
 
-```bash
-cd mangal-app
-npm install
-```
-
-## Çalıştırma (Development)
-
-```bash
-npm run dev
-```
-
-Vite, terminalde bir local URL gösterecektir (genelde `http://localhost:5173`).
-
-## Build (Production)
-
-```bash
-npm run build
-```
-
-Build çıktısı `dist/` klasörüne alınır.
-
-## Preview (Build’i lokal test)
-
-```bash
-npm run preview
-```
-
-## Lint
-
-```bash
-npm run lint
-```
-
-## Kullanılan Teknolojiler
-
-- React
-- Vite
-- Tailwind CSS
-- ESLint
-- PostCSS / Autoprefixer
-
-## Proje Yapısı (özet)
-
-- `index.html` — uygulama giriş HTML’i
-- `src/` — React kaynak kodları
-- `public/` — statik dosyalar
-- `vite.config.js` — Vite ayarları
-- `tailwind.config.js` — Tailwind ayarları
+LocalStorage Entegrasyonu: Veriler tarayıcıda saklanır, sayfa yenilense de gitmez.
 
 
-## Lisans
 
-Bu projede lisans bilgisi belirtilmemiş. İstersen bir lisans seçip `LICENSE` dosyası ekleyebiliriz.
+🛠️ Teknolojiler
+React + Vite (Hızlı ve modern frontend)
+
+Tailwind CSS (Şık ve hızlı stil yönetimi)
+
+Claude Code (Agent Teams): Bu proje Anthropic'in deneysel ajan takımları kullanılarak geliştirilmiştir.
+
+📦 Kurulum
+Projeyi yerelde çalıştırmak için:
+
+Repoyu klonlayın: git clone <repo-url>
+
+Klasöre girin: cd mangal-app
+
+Bağımlılıkları yükleyin: npm install
+
+Projeyi başlatın: npm run dev
+
+💡 Nasıl Kullanılır?
+Katılımcıları Ekle: Mangala katılan herkesin adını yaz.
+
+Harcamaları Gir: İstersen manuel gir, istersen WhatsApp sohbetini .txt olarak yükle.
+
+Sonucu Al: "Sonuç" sekmesine git, kimin kime ne kadar atacağını gör.
+
+Paylaş: Listeyi kopyala ve WhatsApp grubuna yapıştır!
