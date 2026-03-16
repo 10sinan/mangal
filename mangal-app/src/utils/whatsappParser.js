@@ -16,15 +16,46 @@ const RE_CURRENCY = /(\d[\d.,]*)\s*(TL|lira)\b/i;
 const RE_FINANCIAL_VERB = /\b(verdim|aldım|harcadım|ödedim|ödüyorum|gönderdim|yatırdım|öde[rn]?|borç)\b/i;
 const RE_INVALID_CTX = /\b\d+\s*(kere|tane|defa|kez|saniye|dakika|saat|gün|yıl|ay|kişi|numara|no)\b/i;
 
+function normalizeAmount(raw) {
+  if (!raw) return null;
+  let s = String(raw).trim().replace(/\s+/g, '');
+  const hasDot = s.includes('.');
+  const hasComma = s.includes(',');
+
+  if (hasDot && hasComma) {
+    if (s.lastIndexOf(',') > s.lastIndexOf('.')) {
+      s = s.replace(/\./g, '').replace(',', '.');
+    } else {
+      s = s.replace(/,/g, '');
+    }
+  } else if (hasComma) {
+    const parts = s.split(',');
+    if (parts.length === 2 && parts[1].length <= 2) {
+      s = `${parts[0].replace(/,/g, '')}.${parts[1]}`;
+    } else {
+      s = s.replace(/,/g, '');
+    }
+  } else if (hasDot) {
+    const parts = s.split('.');
+    if (!(parts.length === 2 && parts[1].length <= 2)) {
+      s = s.replace(/\./g, '');
+    }
+  }
+
+  const val = Number.parseFloat(s);
+  if (!Number.isFinite(val) || val <= 0) return null;
+  return Math.round((val + Number.EPSILON) * 100) / 100;
+}
+
 function extractAmount(message) {
   // Explicit currency match first
   const cm = message.match(RE_CURRENCY);
-  if (cm) return Math.round(parseFloat(cm[1].replace(',', '.')));
+  if (cm) return normalizeAmount(cm[1]);
 
   // Financial verb + number, but not in invalid context
   if (RE_FINANCIAL_VERB.test(message) && !RE_INVALID_CTX.test(message)) {
     const nm = message.match(/\b(\d[\d.,]*)\b/);
-    if (nm) return Math.round(parseFloat(nm[1].replace(',', '.')));
+    if (nm) return normalizeAmount(nm[1]);
   }
 
   return null;
